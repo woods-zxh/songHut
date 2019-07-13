@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/square"
+        android:title="@string/square"
+        android:icon="@drawable/bottom_navigation_1"
+        android:background="#e0000000"
+        android:scaleType="fitCenter"/>
+
+    <item
+        android:id="@+id/creation"
+        android:title="@string/creation"
+        android:icon="@drawable/bottom_navigation_2"/>
+
+    <item
+        android:id="@+id/activity"
+        android:title="@string/activity"
+        android:icon="@drawable/bottom_navigation_3"/>
+
+    <item
+        android:id="@+id/account"
+        android:title="@string/account"
+        android:icon="@drawable/bottom_navigation_4"/>
+
+</menu>

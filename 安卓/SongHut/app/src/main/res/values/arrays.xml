@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_add_resource">
+        <item>已添加的库</item>
+        <item>新建库</item>
+        <item>收藏的库</item>
+    </string-array>
+
+    <string-array name="spinner_add_instrument">
+        <item>钢琴</item>
+        <item>小提琴</item>
+        <item>长笛</item>
+        <item>吉他</item>
+        <item>智能伴奏</item>
+    </string-array>
+
+    <string-array name="spinner_save_repository">
+        <item>素材库</item>
+        <item>木棉</item>
+        <item>波希米亚的奇迹</item>
+        <item>如影随形</item>
+    </string-array>
+
+    <string-array name="ctype">
+        <item>按创建时间</item>
+        <item>按查看时间</item>
+        <item>按乐库名称</item>
+    </string-array>
+</resources>

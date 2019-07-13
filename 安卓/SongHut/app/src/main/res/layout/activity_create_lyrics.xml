@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".CreateLyricsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_audition"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="#81DDCC"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="false"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="词作"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            tools:layout_editor_absoluteX="184dp"
+            tools:layout_editor_absoluteY="5dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_audition">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/edit_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F6F6F7">
+
+            <Button
+                android:id="@+id/btn_redo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/redo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_undo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/undo"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_redo"
+                app:layout_constraintEnd_toStartOf="@+id/btn_redo"
+                app:layout_constraintTop_toTopOf="@+id/btn_redo" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/lyric_save"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_complete"
+                app:layout_constraintStart_toEndOf="@+id/btn_complete"
+                app:layout_constraintTop_toTopOf="@+id/btn_complete" />
+
+            <Button
+                android:id="@+id/btn_complete"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="#F6F6F7"
+                android:text="完成"
+                android:textColor="#48D5BD"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/et_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lyrics_border"
+            android:gravity="left"
+            android:hint="标题"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_lyrics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/edit_bar"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="输入歌词"
+            android:textColor="#000000"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

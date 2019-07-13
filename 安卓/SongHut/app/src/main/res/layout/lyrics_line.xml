@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_lyrics"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Tell me what do you want to hear"
+    android:textColor="#E1FFFFFF"
+    android:textSize="18sp"
+    android:gravity="center_horizontal"
+    android:textStyle="bold">
+
+</TextView>

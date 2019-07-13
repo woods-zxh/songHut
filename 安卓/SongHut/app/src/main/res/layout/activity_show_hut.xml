@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowHutActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_audition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#81DDCC"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/toolbar_back">
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="false"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="乐库"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="13dp" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:id="@+id/more_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00000000"
+        android:onClick="onClick"
+        android:text="更多"
+        android:textColor="@color/bottom_bar_background"
+        app:layout_constraintBottom_toBottomOf="@+id/tb_audition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_audition">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager2"
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tb_audition">
+
+            </android.support.v4.view.ViewPager>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:background="@android:color/background_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+                <ImageButton
+                    android:id="@+id/btn_pause"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:background="#00000000"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/play_music" />
+
+                <SeekBar
+                    android:id="@+id/sb_convert_audition"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxHeight="2dp"
+                    android:minHeight="2dp"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip"
+
+                    android:progressDrawable="@drawable/seekbar_blue"
+                    android:thumb="@drawable/seekbar_thumb_selector"
+                    app:layout_constraintBottom_toBottomOf="@+id/btn_pause"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_current_time"
+                    app:layout_constraintStart_toEndOf="@+id/btn_pause"
+                    app:layout_constraintTop_toTopOf="@+id/btn_pause" />
+
+                <TextView
+                    android:id="@+id/tv_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/init_time"
+                    android:textColor="#5F6162"
+                    app:layout_constraintBottom_toBottomOf="@+id/sb_convert_audition"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_total_time"
+                    app:layout_constraintTop_toTopOf="@+id/sb_convert_audition" />
+
+                <TextView
+                    android:id="@+id/tv_total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/total_time"
+                    android:textColor="#5F6162"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_current_time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_current_time" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="578dp"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/cut1"
+                tools:layout_editor_absoluteY="56dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

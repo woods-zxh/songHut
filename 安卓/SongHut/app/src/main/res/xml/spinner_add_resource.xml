@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource>
+    <string-array name="array_add_resource">
+        <item>已添加的库</item>
+        <item>新建库</item>
+        <item>收藏的库</item>
+    </string-array>
+</resource>
